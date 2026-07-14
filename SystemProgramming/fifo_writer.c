@@ -9,7 +9,7 @@ int main(){
     int fd;
 
     if(mkfifo("/tmp/myfifo",0666) == -1 && errno != EEXIST){
-        perror("make fifo failed");\
+        perror("make fifo failed");
         exit(1);
     }
 

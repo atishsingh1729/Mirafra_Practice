@@ -9,6 +9,9 @@ typedef struct message{
     char mText[100];
 }message_t;
 
+
+
+
 int main(){
 
     key_t key = 1234;
@@ -28,7 +31,7 @@ int main(){
         perror("message send failed");
         exit(1);
     }
-    
+    printf("Message sent succesfully\n");
 
     return 0;
 
