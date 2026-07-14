@@ -19,13 +19,13 @@ int main(){
     int msgid  = msgget(key,0666);
 
     if(msgid== -1){
-        perror("msgget\n");
+        perror("msgget");
     }
 
     struct message msg;
 
-    if(msgrcv(msgid,&msg,sizeof(msg.mText),0,0) == -1){
-        perror("msgrcv\n");
+    if(msgrcv(msgid,&msg,sizeof(msg.mText),1,0) == -1){
+        perror("msgrcv");
         return 1;
     }
 
